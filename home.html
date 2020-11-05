@@ -15,13 +15,17 @@
 
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
+
+
     <body class="grey darken-4 white-text">
 
     <!-- container with everything -->
     <div class="container center">
 
-<h1>Inventory For Drinks</h1>
+<h1>Inventory</h1>
 
 
 
@@ -50,30 +54,8 @@
 
 
         <!-- productos -->
-        <tbody>
-          <tr>
-            <td>corona x 6</td>
-            <td>10</td>
-            <td>$5.00</td>
-            <td>$8.00</td>
-            <td>$3.00</td>
-          </tr>
-          <tr>
-            <td>Estella x 6</td>
-            <td>10</td>
-            <td>$5.00</td>
-            <td>$8.00</td>
-            <td>$3.00</td>
-          </tr>
-
-     
-          <tr>
-            <td>Heineken x 6</td>
-            <td>10</td>
-            <td>$5.00</td>
-            <td>$8.00</td>
-            <td>$3.00</td>
-          </tr>
+        <tbody id="here">
+      
         </tbody>
       </table>
 
@@ -85,7 +67,7 @@
 
 
 
-<h1>add to Inventory</h1>
+<h1>Add to inventory</h1>
 
 
 <!-- input information  -->
@@ -95,29 +77,40 @@
 <div class=" container ">
 
 
-    <input placeholder="Producto" id="Producto" type="text" class="orange-text">
+  <input placeholder="Producto" id="Producto" type="text" class="orange-text">
     <label for="Producto">Producto</label>
-
-
     <input placeholder="Cantidad" id="Cantidad" type="number" class="orange-text">
     <label for="Cantidad">Cantidad</label>
-
-    <input placeholder="Precio de Compra" id="Precio de Compra" type="number" class="orange-text">
+    <input placeholder="Precio de Compra" id="Compra" type="number" class="orange-text">
     <label for="PrecioCompra">Precio de Compra</label>
-
-    <input placeholder="Precio de Venta" id="Precio de Venta" type="number" class="orange-text">
+    <input placeholder="Precio de Venta" id="Venta" type="number" class="orange-text">
     <label for="PrecioVenta">Precio de Venta</label>
-    
-</div>
-
-
 
 </div>
+<div class="container ">
+
+  <div class="right">
+    <a  id="enter" class="waves-effect waves-light btn-flat orange-text">enter</a>
+
+
+  </div>
+ </div>
+
+
+</div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+
+
+<script src="index.js" async defer></script>
 
 
 
             
-        <script src="index.js" async defer></script>
 
             <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
